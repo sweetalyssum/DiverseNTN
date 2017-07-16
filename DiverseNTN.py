@@ -11,6 +11,7 @@ class: DiverseNTN
 # -*- coding:utf-8 -*-
 
 import yaml
+import os
 import sys
 import string
 from numpy import *
@@ -220,8 +221,10 @@ class DiverseNTN(object):
             n+=1
 
     def TestNTN(self, n):
+        if not os.path.exists('result'):
+            os.makedirs('result')
         self.RelevanceFeature(self.testFile, self.testList)
-        resultFile = open("result\\result"+str(n)+".txt", "w")
+        resultFile = open("result/result"+str(n)+".txt", "w")
         for i in xrange(self.dictConf['query']):
             if len(self.testList[i]) != 0:
                 bestResult = 101
@@ -254,7 +257,6 @@ class DiverseNTN(object):
         self.InitSGD()
         self.InitSelected()
         self.TrainNTN()
-        #self.TestNTN()
 
 
 def main():
