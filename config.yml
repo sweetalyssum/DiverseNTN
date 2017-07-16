@@ -1,0 +1,4 @@
+﻿query : 50
+tensor : 3
+learning_rate : 0.001
+convergence : 0.0001
