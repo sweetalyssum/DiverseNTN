@@ -1,12 +1,14 @@
-# DiverseNTN
+# Modeling Document Novelty with Neural Tensor Network for Search Result Diversification
 
-## Train
+## Training data
+* feature.txt and feature_test.txt: document/query featture vectors 
+* idealfile: groundtruth ranking for each query 
 
-### 训练数据
-feature.txt和feature_test.txt为每个文档和对应query的特征向量，idealfile为每个query的groundtruth
-
-### 运行命令
+## Command line
 python DiverseNTN.py feature.txt feature_test.txt idealfile config.yml
 
-### 训练结果
-训练结果将存储在result文件夹中
+## Results
+The training results are saved in fold *reslut* 
+
+## Reference
+[1] Long Xia, Jun Xu, Yanyan Lan, Jiafeng Guo, Xueqi Cheng. Modeling Document Novelty with Neural Tensor Network for Search Result Diversification. In Proc. SIGIR 2016. 
